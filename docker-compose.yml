@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  toxy:
+    build: toxy/
+    volumes:
+      - $NODE_SCRIPTS:/opt/scripts/
+    ports:
+      - "3000:3000"
+    command: node /opt/scripts/toxy.js
